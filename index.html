@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BookShelf</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h2>BOOKSHELF APP</h2>
+		</div>
+		<div class="addBookForm">
+			<h3>Add New Book</h3>
+			<form class="addBook">
+				<label for="title">Title</label>
+				<input type="text" name="title" class="field" id="title" required>
+				<label for="author">Author</label>
+				<input type="text" name="author" class="field" id="author" required>
+				<label for="year">Year</label>
+				<input type="text" name="year" class="field" id="year" required>
+				<input type="checkbox" name="status" class="checkboxInput" id="check"><label class="checkLabel" for="check">Mark as Finish Read</label>
+				<button type="submit" class="submitData">Add Book to Shelf</button>
+			</form>
+		</div>
+		<div class="library">
+			<div class="search">
+				<form class="searchBook">
+					<input type="Text" id="search" placeholder="Search Book Title">
+					<button type="submit" class="searchButton">Search</button>
+				</form>
+			</div>
+			<div class="shelf first">
+				<div class="title finish">
+					<h2>Finish Read</h2>
+				</div>
+			</div>
+			<div class="shelf second">
+				<div class="title unfinish">
+					<h2>Unfinish Read</h2>
+				</div>
+			</div>
+			<div class="update">
+				<h3>Edit Book</h3>
+				<form class="updateBook">
+					<label for="title-update">Title</label>
+					<input type="text" class="field" id="title-update" required>
+					<label for="author-update">Author</label>
+					<input type="text" class="field" id="author-update" required>
+					<label for="year-update">Year</label>
+					<input type="text" class="field" id="year-update" required>
+					<button type="submit" class="updateData" onclick="updateButtonEvent()" disabled>Update Book</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="storage.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
